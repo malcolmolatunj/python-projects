@@ -11,9 +11,7 @@ def encode(message, *, method='e'):
     message = message.replace(' ','')
     code = translate if method == 'e' else recover
     
-    response = ''
-    for char in message:
-        response += code[char]
+    response = ''.join(code[char] for char in message)
     print("Your new message is:", response)
 
 
