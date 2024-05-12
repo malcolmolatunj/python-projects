@@ -42,8 +42,9 @@ def main() -> None:
         path = nx.shortest_path(graph, args.source.upper(), args.target.upper())
     except NodeNotFound:
         print(
-            f"{args.source} was not found in the dictionary or has no connected words."
+            f"Either {args.source} or {args.target} was not found in the dictionary."
         )
+        print('If they are in the dictionary, then they are not one letter away from other words.')
     except NetworkXNoPath:
         print(f'No path found between {args.source} and {args.target}')
     else:
