@@ -1,7 +1,7 @@
 import argparse
 
 import networkx as nx
-from networkx.exception import NodeNotFound
+from networkx.exception import NodeNotFound, NetworkXNoPath
 
 
 def differs_by_one_letter(word1: str, word2: str) -> bool:
@@ -44,6 +44,8 @@ def main() -> None:
         print(
             f"{args.source} was not found in the dictionary or has no connected words."
         )
+    except NetworkXNoPath:
+        print(f'No path found between {args.source} and {args.target}')
     else:
         print(path)
 
