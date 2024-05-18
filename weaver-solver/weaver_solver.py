@@ -48,7 +48,7 @@ def main() -> None:
     except NetworkXNoPath:
         print(f"No path found between {args.source} and {args.target}")
     else:
-        print(path)
+        print(" -> ".join(path))
 
 
 if __name__ == "__main__":

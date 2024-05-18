@@ -537,6 +537,7 @@ cloak
 clock
 clods
 clogs
+clone
 close
 cloth
 cloud
@@ -2019,6 +2020,7 @@ privy
 prize
 probe
 prone
+prong
 proof
 props
 prose
